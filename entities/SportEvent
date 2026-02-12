@@ -1,0 +1,73 @@
+{
+  "name": "SportEvent",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "sport_type": {
+      "type": "string",
+      "enum": [
+        "football",
+        "basketball",
+        "volleyball",
+        "hockey",
+        "swimming",
+        "athletics",
+        "skiing",
+        "mas_wrestling",
+        "archery",
+        "jumping",
+        "other"
+      ],
+      "description": "\u0412\u0438\u0434 \u0441\u043f\u043e\u0440\u0442\u0430"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "training",
+        "competition",
+        "open_lesson",
+        "championship"
+      ],
+      "default": "training"
+    },
+    "date_start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "date_end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "venue_id": {
+      "type": "string",
+      "description": "ID \u0441\u043f\u043e\u0440\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u043e\u0431\u044a\u0435\u043a\u0442\u0430"
+    },
+    "venue_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "is_free": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "number"
+    },
+    "registration_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "max_participants": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "sport_type",
+    "date_start"
+  ]
+}

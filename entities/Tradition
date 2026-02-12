@@ -1,0 +1,68 @@
+{
+  "name": "Tradition",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "title_sakha": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "video",
+        "article",
+        "audio",
+        "photo"
+      ],
+      "description": "\u0422\u0438\u043f \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "language",
+        "customs",
+        "crafts",
+        "cuisine",
+        "music",
+        "dance",
+        "holidays",
+        "beliefs"
+      ],
+      "description": "\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f \u0442\u0440\u0430\u0434\u0438\u0446\u0438\u0438"
+    },
+    "media_url": {
+      "type": "string"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "\u041d\u043e\u0441\u0438\u0442\u0435\u043b\u044c \u0442\u0440\u0430\u0434\u0438\u0446\u0438\u0438"
+    },
+    "author_district": {
+      "type": "string"
+    },
+    "duration_minutes": {
+      "type": "number"
+    },
+    "views_count": {
+      "type": "number",
+      "default": 0
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "content_type",
+    "category"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "title_sakha": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ysyakh",
+        "wrestling",
+        "concert",
+        "exhibition",
+        "sport",
+        "theater",
+        "cinema",
+        "other"
+      ]
+    },
+    "date_start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "date_end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "location": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "price_min": {
+      "type": "number"
+    },
+    "price_max": {
+      "type": "number"
+    },
+    "is_free": {
+      "type": "boolean",
+      "default": false
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "tickets_available": {
+      "type": "boolean",
+      "default": true
+    },
+    "district": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "date_start",
+    "location"
+  ]
+}

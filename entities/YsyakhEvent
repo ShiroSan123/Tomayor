@@ -1,0 +1,56 @@
+{
+  "name": "YsyakhEvent",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "title_sakha": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "ceremony",
+        "concert",
+        "competition",
+        "workshop",
+        "food",
+        "exhibition",
+        "other"
+      ],
+      "description": "\u0422\u0438\u043f \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f"
+    },
+    "date_start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "date_end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "location_zone": {
+      "type": "string",
+      "description": "\u0417\u043e\u043d\u0430 \u043d\u0430 \u0442\u0435\u0440\u0440\u0438\u0442\u043e\u0440\u0438\u0438 \u042b\u0441\u044b\u0430\u0445\u0430"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "is_main": {
+      "type": "boolean",
+      "default": false,
+      "description": "\u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0435"
+    }
+  },
+  "required": [
+    "title",
+    "event_type",
+    "date_start"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "FerryQueue",
+  "type": "object",
+  "properties": {
+    "crossing_name": {
+      "type": "string",
+      "description": "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043f\u0435\u0440\u0435\u043f\u0440\u0430\u0432\u044b"
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "to_yakutsk",
+        "from_yakutsk"
+      ]
+    },
+    "queue_position": {
+      "type": "number"
+    },
+    "vehicle_type": {
+      "type": "string",
+      "enum": [
+        "car",
+        "truck",
+        "bus",
+        "pedestrian"
+      ]
+    },
+    "estimated_wait_minutes": {
+      "type": "number"
+    },
+    "ticket_number": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "boarding",
+        "completed",
+        "cancelled"
+      ],
+      "default": "waiting"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "crossing_name",
+    "direction",
+    "vehicle_type"
+  ]
+}
